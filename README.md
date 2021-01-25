@@ -57,8 +57,6 @@ http://localhost/laravel_notes/public/admin : admin@admin.com/password
 - https://www.youtube.com/watch?v=DRhhfy2sG1E
 - https://www.youtube.com/playlist?list=PL8p2I9GklV47wJibNio45rH1qOHguwq5Z
 
-![](https://raw.githubusercontent.com/Ruslan-Aliyev/laravel_notes/master/Illustrations/Lara%20Unit%20Test.jpg)
-
 ## GraphQL
 
 - https://www.youtube.com/playlist?list=PLEhEHUEU3x5qsA5JnRzhgOghrH9Vqz4cg
@@ -88,7 +86,7 @@ Do like this: https://github.com/Ruslan-Aliyev/laravel_notes/blob/master/graphql
 
 Check http://localhost/laravel_notes/public/graphql POSTMan like so: https://learning.postman.com/docs/sending-requests/supported-api-frameworks/graphql/
 
-![](lighthouse.png)
+![](https://raw.githubusercontent.com/Ruslan-Aliyev/laravel_notes/master/Illustrations/lighthouse.png)
 
 #### More notes
 
