@@ -137,3 +137,13 @@ See http://localhost/laravel_notes/public/
 
 - https://www.youtube.com/watch?v=KqzGKg8IxE4
 	- https://www.youtube.com/watch?v=CFGjn3yKMNc
+
+## Web Scraping
+
+### Plain PHP
+
+https://youtu.be/fABDulzEH1c
+
+### Laravel
+
+https://youtube.com/playlist?list=PLdrI5L8kS2YJRWncyGzrlb8rhlDylxmmG
