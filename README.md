@@ -46,6 +46,11 @@ http://localhost/laravel_notes/public/admin : admin@admin.com/password
 	- https://voyager-docs.devdojo.com/customization/overriding-files
 	- EG: For `http://localhost/laravel_notes/public/admin/posts`, override `vendor/tcg/voyager/resources/views/bread/browse.blade.php` with `resources/views/vendor/voyager/posts/browse.blade.php`
 
+## Making Service
+
+- https://github.com/artogrig/laravel-make-service
+- https://laracasts.com/discuss/channels/laravel/howwhere-do-i-create-service-classes
+
 ## Unit Test
 
 ### Plain PHP
@@ -56,6 +61,10 @@ http://localhost/laravel_notes/public/admin : admin@admin.com/password
 
 - https://www.youtube.com/watch?v=DRhhfy2sG1E
 - https://www.youtube.com/playlist?list=PL8p2I9GklV47wJibNio45rH1qOHguwq5Z
+
+`php artisan make:test TestTest --unit`
+
+`vendor/bin/phpunit`
 
 ## GraphQL
 
