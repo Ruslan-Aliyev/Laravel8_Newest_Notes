@@ -192,6 +192,19 @@ Laravel uses Monolog under the hood
 
 - https://laravel.com/docs/8.x/logging
 - https://www.youtube.com/watch?v=GOmiWKpwFSo
-
+- https://stackify.com/laravel-logging-tutorial/
 
 - https://www.youtube.com/watch?v=XWFXikdTFcw
+
+## JWT
+
+- https://www.youtube.com/watch?v=VtAxYez4ZdQ
+
+## WebSockets
+
+- https://www.youtube.com/watch?v=rNOGLLPXzwc
+- https://www.youtube.com/playlist?list=PLwAKR305CRO9rlj-U9oOi4m2sQaWN6XA8
+
+### Pusher
+
+- https://www.youtube.com/watch?v=l44IF9fBNOs
