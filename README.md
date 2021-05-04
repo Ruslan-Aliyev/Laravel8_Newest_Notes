@@ -181,6 +181,9 @@ Refs:
 - https://rollbar.com/guides/where-are-php-errors-logged/
 - https://www.loggly.com/ultimate-guide/php-logging-basics/
 
+- https://www.youtube.com/watch?v=5VtU-HK9PCw
+- https://www.youtube.com/watch?v=4uMDw5q8Scs
+
 ### Monolog
 
 Laravel uses Monolog under the hood
@@ -198,13 +201,23 @@ Laravel uses Monolog under the hood
 
 ## JWT
 
+- Intro: https://github.com/Ruslan-Aliyev/auth#jwt
 - https://www.youtube.com/watch?v=VtAxYez4ZdQ
+
+- https://www.youtube.com/watch?v=jF9wdF0sViI
+- https://www.youtube.com/watch?v=6eX9Pj-GhZs
+- https://www.youtube.com/watch?v=jIzPuM76-nI
 
 ## WebSockets
 
 - https://www.youtube.com/watch?v=rNOGLLPXzwc
 - https://www.youtube.com/playlist?list=PLwAKR305CRO9rlj-U9oOi4m2sQaWN6XA8
 
+- https://www.youtube.com/watch?v=wknGvg0sTAc
+- https://www.youtube.com/watch?v=2PTgJwxf6UI&list=PLe30vg_FG4OR3b24WlxeTWsj7Z2wOtYrH&index=17
+- https://www.youtube.com/playlist?list=PLwAKR305CRO9rlj-U9oOi4m2sQaWN6XA8
+
 ### Pusher
 
 - https://www.youtube.com/watch?v=l44IF9fBNOs
+- https://www.youtube.com/watch?v=CkRGJC0ytdU
