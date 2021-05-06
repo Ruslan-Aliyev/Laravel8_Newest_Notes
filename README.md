@@ -190,12 +190,14 @@ https://github.com/Ruslan-Aliyev/async_php#queue
 3 ways:
 - Inline (stdout)
 - Log files
-- Framework, 3rd party log libraries
+- Frameworks', 3rd party log libraries
 
-In `php.ini`:
-- Turn on `log_errors`.
-- Turn off `display_errors`, so that errors would to into log files instead of appearing inline on screen.
-- Set `error_log` to either `syslog` (typically on Linux: `/var/log/syslog`) or a specific file path (default on Linux: `/var/log/{server}/error.log`).
+In `php.ini`
+- Turn on `log_errors`
+- Turn off `display_errors`, so that errors would to into log files instead of appearing inline on screen
+- Set `error_log` to 
+	- either `syslog` - typically on Linux: `/var/log/syslog`
+	- or a _specific file path_ - default on Linux: `/var/log/{server}/error.log`
 
 After editing the `php.ini`, you can use `<?php php_info(); ?>` and check `error_log` to see the path of the log file.
 
@@ -205,7 +207,7 @@ Other useful log functions in PHP:
 
 Refs:
 - https://rollbar.com/guides/where-are-php-errors-logged/
-- https://www.loggly.com/ultimate-guide/php-logging-basics/
+- https://www.loggly.com/ultimate-guide/php-logging-basics/  
 
 - https://www.youtube.com/watch?v=5VtU-HK9PCw
 - https://www.youtube.com/watch?v=4uMDw5q8Scs
@@ -219,9 +221,45 @@ Laravel uses Monolog under the hood
 
 ### Laravel
 
+Default log's path: `storage/logs/laravel.log`
+
+In `.env`, you can see `LOG_CHANNEL=stack`
+
+Then you can see `config/logging.php`
+
+With the default "stack" channel, you can specify multiple channels, eg:
+
+```php
+'channels' => [
+    'stack' => [
+        'driver' => 'stack',
+        'channels' => ['single', 'custom'],
+    ],
+
+    'single' => [
+        'driver' => 'single',
+        'path' => storage_path('logs/laravel.log'), // You can see that the default log path is indeed at 'storage/logs/laravel.log'
+        ...
+    ],
+
+    'custom' => [ // You can specify your custom logs
+        'driver' => 'single',
+        'path' => storage_path('logs/custom.log'),
+        ...
+    ],
+],
+```
+
+Then just test if it works by making a route
+```php
+Route::get('/log', function () {
+    Log::channel('custom')->info('msg', ['data' => 'value']);
+});
+```
+
 - https://laravel.com/docs/8.x/logging
 - https://www.youtube.com/watch?v=GOmiWKpwFSo
-- https://stackify.com/laravel-logging-tutorial/
+- https://stackify.com/laravel-logging-tutorial/  
 
 - https://www.youtube.com/watch?v=XWFXikdTFcw
 

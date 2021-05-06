@@ -17,7 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+});
+
+Route::get('/log', function () {
+    Log::channel('custom')->info('msg', ['data' => 'value']);
 });
