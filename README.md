@@ -1,13 +1,37 @@
-# Good tutorials on new Laravel stuff
+# Setup this project
 
-- https://www.youtube.com/playlist?list=PLe30vg_FG4OR3b24WlxeTWsj7Z2wOtYrH
-- https://www.youtube.com/playlist?list=PLpzy7FIRqpGCl26FcHazZmIUwT7zFJu7U
+```
+git clone https://github.com/Ruslan-Aliyev/laravel_notes.git
+cd laravel_notes
+cp .env.example .env
+```
+Import `laravel_notes.sql` into DB
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_notes
+DB_USERNAME=
+DB_PASSWORD=
+```
+
+```
+composer install
+php artisan key:generate
+```
+
+## Environment
 
 node -v
 v10.21.0
 
 npm -v
 6.14.4
+
+# Good tutorials on new (2021) Laravel stuff
+
+- https://www.youtube.com/playlist?list=PLe30vg_FG4OR3b24WlxeTWsj7Z2wOtYrH
+- https://www.youtube.com/playlist?list=PLpzy7FIRqpGCl26FcHazZmIUwT7zFJu7U
 
 ## Homestead
 
@@ -19,9 +43,7 @@ https://github.com/atabegruslan/Others/blob/master/Virtual/laravel_homestead.md
 composer global require laravel/installer
 laravel new laravel_notes
 ```
-
 or
-
 ```
 composer create-project --prefer-dist laravel/laravel laravel_notes
 php artisan key:generate
@@ -156,6 +178,10 @@ https://youtu.be/fABDulzEH1c
 ### Laravel
 
 https://youtube.com/playlist?list=PLdrI5L8kS2YJRWncyGzrlb8rhlDylxmmG
+
+## Queues
+
+https://github.com/Ruslan-Aliyev/async_php#queue
 
 ## Logging
 
