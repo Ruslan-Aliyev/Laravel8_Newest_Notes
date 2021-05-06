@@ -185,49 +185,16 @@ https://github.com/Ruslan-Aliyev/async_php#queue
 
 ## Logging
 
-### PHP
+Laravel uses Monolog under the hood.  
+More about PHP logs and Monolog, see: https://github.com/Ruslan-Aliyev/Log
 
-3 ways:
-- Inline (stdout)
-- Log files
-- Frameworks', 3rd party log libraries
+1. Default log's path: `storage/logs/laravel.log`
 
-In `php.ini`
-- Turn on `log_errors`
-- Turn off `display_errors`, so that errors would to into log files instead of appearing inline on screen
-- Set `error_log` to 
-	- either `syslog` - typically on Linux: `/var/log/syslog`
-	- or a _specific file path_ - default on Linux: `/var/log/{server}/error.log`
+2. In `.env`, you can see `LOG_CHANNEL=stack`
 
-After editing the `php.ini`, you can use `<?php php_info(); ?>` and check `error_log` to see the path of the log file.
+3. Then you can see `config/logging.php`
 
-Other useful log functions in PHP:
-- `error_reporting(E_ALL)` or whatever other level.
-- `error_log(msg, type, dest, ...)` to make a error.
-
-Refs:
-- https://rollbar.com/guides/where-are-php-errors-logged/
-- https://www.loggly.com/ultimate-guide/php-logging-basics/  
-
-- https://www.youtube.com/watch?v=5VtU-HK9PCw
-- https://www.youtube.com/watch?v=4uMDw5q8Scs
-
-### Monolog
-
-Laravel uses Monolog under the hood
-
-- https://silex.symfony.com/doc/2.0/providers/monolog.html
-- https://www.youtube.com/watch?v=cePgCwNoGF8
-
-### Laravel
-
-Default log's path: `storage/logs/laravel.log`
-
-In `.env`, you can see `LOG_CHANNEL=stack`
-
-Then you can see `config/logging.php`
-
-With the default "stack" channel, you can specify multiple channels, eg:
+4. With the default "stack" channel, you can specify multiple channels, eg:
 
 ```php
 'channels' => [
@@ -250,7 +217,7 @@ With the default "stack" channel, you can specify multiple channels, eg:
 ],
 ```
 
-Then just test if it works by making a route
+5. Then just test if it works by making a route
 ```php
 Route::get('/log', function () {
     Log::channel('custom')->info('msg', ['data' => 'value']);
