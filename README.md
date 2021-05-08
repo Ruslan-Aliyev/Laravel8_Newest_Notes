@@ -241,6 +241,8 @@ Route::get('/log', function () {
 
 ## WebSockets
 
+### All done locally
+
 1. Setup: `composer require beyondcode/laravel-websockets`
 2. `php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
 `
@@ -286,9 +288,7 @@ Route::get('/testws', function () {
 17. In `resources/js/bootstrap.js`
 ```js
 import Echo from 'laravel-echo';
-
 window.Pusher = require('pusher-js');
-
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: process.env.MIX_PUSHER_APP_KEY,
@@ -313,7 +313,36 @@ mounted() {
     - https://beyondco.de/docs/laravel-websockets/getting-started/installation
 - https://www.youtube.com/playlist?list=PLwAKR305CRO9rlj-U9oOi4m2sQaWN6XA8
 
-### Pusher
+### With Pusher
+
+1. Sign up at https://dashboard.pusher.com/
+2. Copy https://dashboard.pusher.com/apps/{app_id}/keys to `.env` 
+```
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_APP_CLUSTER=
+```
+3. Change `config/broadcasting.php` pusher's options
+```php
+'options' => [
+    'cluster' => env('PUSHER_APP_CLUSTER'),
+    'encrypted' => true
+],
+```
+4. Visit http://localhost/laravel_notes/public/testws and see new log on https://dashboard.pusher.com/apps/{app_id}/console
+5. Change `resources/js/bootstrap.js`
+```js
+import Echo from 'laravel-echo';
+window.Pusher = require('pusher-js');
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: process.env.MIX_PUSHER_APP_KEY,
+    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+    encrypted: true
+});
+```
+6. `npm run prod`, visit http://localhost/laravel_notes/public/testws , then see http://localhost/laravel_notes/public/ and open its "Developer tools > Console"
 
 - https://www.youtube.com/watch?v=2PTgJwxf6UI&list=PLe30vg_FG4OR3b24WlxeTWsj7Z2wOtYrH&index=17
 
