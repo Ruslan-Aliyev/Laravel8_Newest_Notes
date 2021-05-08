@@ -28,6 +28,11 @@
     export default {
         mounted() {
             console.log('Component mounted.');
+
+            window.Echo.channel('channel')
+                .listen('WSTest', (e) => {
+                    console.log(e);
+                });
         },
         data: function() {
             return {

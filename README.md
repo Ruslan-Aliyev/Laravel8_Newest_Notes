@@ -241,14 +241,82 @@ Route::get('/log', function () {
 
 ## WebSockets
 
-- https://www.youtube.com/watch?v=rNOGLLPXzwc
-- https://www.youtube.com/playlist?list=PLwAKR305CRO9rlj-U9oOi4m2sQaWN6XA8
+1. Setup: `composer require beyondcode/laravel-websockets`
+2. `php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
+`
+3. `php artisan migrate`
+4. `php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"`
+5. Uncomment `App\Providers\BroadcastServiceProvider::class,` in `config/app.php` 'providers' array.
+6. Change `config/broadcasting.php` pusher's options to local
+```php
+'options' => [
+    'cluster' => env('PUSHER_APP_CLUSTER'),
+    'encrypted' => true,
+    'host' => '127.0.0.1',
+    'port' => 6001,
+    'scheme' => 'http'
+],
+```
+7. `composer require pusher/pusher-php-server "~3.0"`
+8. In `.env`
+```
+BROADCAST_DRIVER=pusher
+...
+PUSHER_APP_ID=local
+PUSHER_APP_KEY=local
+PUSHER_APP_SECRET=local
+```
+9. `php artisan websockets:serve`
 
-- https://www.youtube.com/watch?v=wknGvg0sTAc
-- https://www.youtube.com/watch?v=2PTgJwxf6UI&list=PLe30vg_FG4OR3b24WlxeTWsj7Z2wOtYrH&index=17
+If you get error saying that port 6001 is already used, then `ps -ef | grep php` and kill the `php artisan serve` process.  
+https://stackoverflow.com/questions/27900174/artisan-error-failed-to-listen-on-localhost8000
+
+10. Visit http://localhost/laravel_notes/public/laravel-websockets , press "Connect"
+11. Test: `php artisan make:event WSTest`
+12. See `app/Events/WSTest.php`
+13. Make a route to test
+```php
+Route::get('/testws', function () {
+    broadcast(new WSTest());
+});
+```
+14. Visit http://localhost/laravel_notes/public/testws
+15. See new entry in http://localhost/laravel_notes/public/laravel-websockets
+16. VueJS: `npm install laravel-echo pusher-js`
+17. In `resources/js/bootstrap.js`
+```js
+import Echo from 'laravel-echo';
+
+window.Pusher = require('pusher-js');
+
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: process.env.MIX_PUSHER_APP_KEY,
+    wsHost: process.env.MIX_PUSHER_APP_WS_SERVER,
+    wsPort: process.env.MIX_PUSHER_APP_WS_PORT,
+    forceTLS: false,
+    disableStats: true
+});
+```
+18. In `resources/js/components/ExampleComponent.vue`
+```js
+mounted() {
+    window.Echo.channel('channel')
+        .listen('WSTest', (e) => {
+            console.log(e);
+        });
+},
+```
+19. `npm run prod`, visit http://localhost/laravel_notes/public/ and open its "Developer tools > Console", visit http://localhost/laravel_notes/public/testws , you will see the results in http://localhost/laravel_notes/public/ 's Console
+
+- https://www.youtube.com/watch?v=rNOGLLPXzwc
+    - https://beyondco.de/docs/laravel-websockets/getting-started/installation
 - https://www.youtube.com/playlist?list=PLwAKR305CRO9rlj-U9oOi4m2sQaWN6XA8
 
 ### Pusher
 
-- https://www.youtube.com/watch?v=l44IF9fBNOs
+- https://www.youtube.com/watch?v=2PTgJwxf6UI&list=PLe30vg_FG4OR3b24WlxeTWsj7Z2wOtYrH&index=17
+
+### Making a proper chat app
+
 - https://www.youtube.com/watch?v=CkRGJC0ytdU

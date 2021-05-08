@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Events\WSTest;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,8 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/log', function () {
     Log::channel('custom')->info('msg', ['data' => 'value']);
+});
+
+Route::get('/testws', function () {
+	broadcast(new WSTest());
 });
