@@ -10,14 +10,18 @@
     "require": {
         "php": "^7.3|^8.0",
         "beyondcode/laravel-websockets": "^1.12",
+        "fabpot/goutte": "^4.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
+        "laravel/nexmo-notification-channel": "^2.5",
         "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.2",
         "nuwave/lighthouse": "^5.1",
         "pusher/pusher-php-server": "~3.0",
-        "tcg/voyager": "^1.4"
+        "tcg/voyager": "^1.4",
+        "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

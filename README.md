@@ -173,11 +173,18 @@ See http://localhost/laravel_notes/public/
 
 ### Plain PHP
 
-https://youtu.be/fABDulzEH1c
+https://github.com/Ruslan-Aliyev/web_crawling/tree/master/Web_Scraping
 
 ### Laravel
 
-https://youtube.com/playlist?list=PLdrI5L8kS2YJRWncyGzrlb8rhlDylxmmG
+- https://youtube.com/playlist?list=PLdrI5L8kS2YJRWncyGzrlb8rhlDylxmmG
+- https://www.youtube.com/watch?v=P0EZ-__6X04
+- https://github.com/FriendsOfPhp/Goutte#usage
+
+1. `composer require fabpot/goutte`
+2. `php artisan make:command ScrapeCommand`
+3. See `app/Console/Commands/ScrapeCommand.php`
+4. `php artisan scraper:start`
 
 ## Queues
 
@@ -233,6 +240,7 @@ Route::get('/log', function () {
 ## JWT
 
 - Intro: https://github.com/Ruslan-Aliyev/auth#jwt
+    - https://jwt-auth.readthedocs.io/en/develop/laravel-installation/
 - https://www.youtube.com/watch?v=VtAxYez4ZdQ
 
 - https://www.youtube.com/watch?v=jF9wdF0sViI
