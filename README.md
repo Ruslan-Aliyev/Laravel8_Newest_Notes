@@ -173,11 +173,12 @@ See http://localhost/laravel_notes/public/
 
 ### Plain PHP
 
-https://youtu.be/fABDulzEH1c
+- https://www.youtube.com/watch?v=fABDulzEH1c
 
 ### Laravel
 
-https://youtube.com/playlist?list=PLdrI5L8kS2YJRWncyGzrlb8rhlDylxmmG
+- https://youtube.com/playlist?list=PLdrI5L8kS2YJRWncyGzrlb8rhlDylxmmG
+- https://github.com/FriendsOfPhp/Goutte
 
 ## Queues
 
