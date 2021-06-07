@@ -88,6 +88,10 @@ http://localhost/laravel_notes/public/admin : admin@admin.com/password
 
 `vendor/bin/phpunit`
 
+## Client Side Vallidation
+
+https://jqueryvalidation.org/
+
 ## GraphQL
 
 - https://www.youtube.com/playlist?list=PLEhEHUEU3x5qsA5JnRzhgOghrH9Vqz4cg
