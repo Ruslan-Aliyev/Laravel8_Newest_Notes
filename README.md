@@ -135,6 +135,7 @@ Check http://localhost/laravel_notes/public/graphql POSTMan like so: https://lea
 - https://medium.com/@sadnub/migrating-to-graphql-on-laravel-with-lighthouse-42bd96d9d73
 - https://github.com/nuwave/lighthouse/issues/77
 - https://www.swoole.co.uk/article/Build-a-GraphQL-API-on-top-of-Swoole
+- https://www.youtube.com/playlist?list=PLcfD4HARQRF_PPy_0TN1NERYVK0iF5Y0Q
 - https://siler.leocavalcante.dev/
 
 ### Apollo in front
