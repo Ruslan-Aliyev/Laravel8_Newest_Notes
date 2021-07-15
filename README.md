@@ -362,3 +362,8 @@ window.Echo = new Echo({
 ### Making a proper chat app
 
 - https://www.youtube.com/watch?v=CkRGJC0ytdU
+
+## CORS
+
+- https://www.stackhawk.com/blog/laravel-cors/
+- https://stackoverflow.com/questions/39429462/adding-access-control-allow-origin-header-response-in-laravel-5-3-passport
