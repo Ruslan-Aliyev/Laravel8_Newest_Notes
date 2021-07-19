@@ -90,6 +90,10 @@ http://localhost/laravel_notes/public/admin : admin@admin.com/password
 
 `vendor/bin/phpunit`
 
+## Client Side Vallidation
+
+https://jqueryvalidation.org/
+
 ## GraphQL
 
 - https://www.youtube.com/playlist?list=PLEhEHUEU3x5qsA5JnRzhgOghrH9Vqz4cg
@@ -133,6 +137,7 @@ Check http://localhost/laravel_notes/public/graphql POSTMan like so: https://lea
 - https://medium.com/@sadnub/migrating-to-graphql-on-laravel-with-lighthouse-42bd96d9d73
 - https://github.com/nuwave/lighthouse/issues/77
 - https://www.swoole.co.uk/article/Build-a-GraphQL-API-on-top-of-Swoole
+- https://www.youtube.com/playlist?list=PLcfD4HARQRF_PPy_0TN1NERYVK0iF5Y0Q
 - https://siler.leocavalcante.dev/
 
 ### Apollo in front
@@ -359,3 +364,8 @@ window.Echo = new Echo({
 ### Making a proper chat app
 
 - https://www.youtube.com/watch?v=CkRGJC0ytdU
+
+## CORS
+
+- https://www.stackhawk.com/blog/laravel-cors/
+- https://stackoverflow.com/questions/39429462/adding-access-control-allow-origin-header-response-in-laravel-5-3-passport
