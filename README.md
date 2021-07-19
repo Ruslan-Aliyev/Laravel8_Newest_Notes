@@ -32,6 +32,8 @@ npm -v
 
 - https://www.youtube.com/playlist?list=PLe30vg_FG4OR3b24WlxeTWsj7Z2wOtYrH
 - https://www.youtube.com/playlist?list=PLpzy7FIRqpGCl26FcHazZmIUwT7zFJu7U
+- https://www.youtube.com/playlist?list=PL36CGZHZJqsXntCJceGN8J2B9wFZD7GFe
+- https://www.youtube.com/playlist?list=PLvv7zSkflFHK-31jurIdTca-LXpu-QGKV
 
 ## Homestead
 
