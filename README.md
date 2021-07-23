@@ -34,6 +34,8 @@ npm -v
 - https://www.youtube.com/playlist?list=PLpzy7FIRqpGCl26FcHazZmIUwT7zFJu7U
 - https://www.youtube.com/playlist?list=PL36CGZHZJqsXntCJceGN8J2B9wFZD7GFe
 - https://www.youtube.com/playlist?list=PLvv7zSkflFHK-31jurIdTca-LXpu-QGKV
+- https://www.youtube.com/c/drehimself/playlists
+    - https://www.youtube.com/watch?v=9OKbmMqsREc&list=RDCMUCtb40EQj2inp8zuaQlLx3iQ&start_radio=1
 
 ## Homestead
 
@@ -92,7 +94,8 @@ http://localhost/laravel_notes/public/admin : admin@admin.com/password
 
 ## Client Side Vallidation
 
-https://jqueryvalidation.org/
+- https://jqueryvalidation.org/
+- https://www.youtube.com/watch?v=yfJP8CQJNYE
 
 ## GraphQL
 
