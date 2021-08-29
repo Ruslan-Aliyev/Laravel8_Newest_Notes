@@ -372,3 +372,149 @@ window.Echo = new Echo({
 
 - https://www.stackhawk.com/blog/laravel-cors/
 - https://stackoverflow.com/questions/39429462/adding-access-control-allow-origin-header-response-in-laravel-5-3-passport
+
+## Pipeline
+
+- https://hafiqiqmal93.medium.com/laravel-eloquent-query-sfilter-using-pipeline-7c6f2673d5da
+
+In controller
+```php
+namespace App\Http\Controllers;
+
+use Illuminate\Pipeline\Pipeline;
+use App\Models\Post;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class PostController extends Controller
+{
+    public function index(Request $request)
+    {
+        $select   = ['title', 'contents'];
+        $filters  = ['title' => 'Wanted Title', 'another_filter_name' => 'another_filter_value'];
+        $paginate = true;
+        $perPage  = 10;
+
+        /** @var \Illuminate\Database\Query\Builder $query */
+        $query = app(Pipeline::class)
+            ->send( Post::with('comment') /* Of type Illuminate\Database\Eloquent\Builder */ )
+            ->through( Post::PIPES )
+            ->thenReturn();
+
+        if (count($select)) 
+        {
+            $query->select(DB::raw(join(',', $select)));
+        }
+        if (!empty($filters))
+        {
+            $query->where($filters);
+        }
+
+        $data = null;
+
+        if ($paginate) 
+        {
+            $data = $query->paginate($perPage);
+        }
+        else
+        {
+            $data = $query->get();
+        }
+
+        $entries           = $data->items();
+        $numberOfPages     = ceil($data->total() / $data->perPage());
+        $currentPageNumber = $data->currentPage();
+    }
+}
+```
+
+In model
+```php
+namespace App\Models;
+
+use App\Models\Comment;
+use App\Filters\Title;
+use App\Filters\Contents;
+
+class Post extends Model
+{
+    const PIPES = [
+        Title::class,
+        Contents::class,
+    ];
+
+    public function comment()
+    {
+        return $this->hasMany(Comment::class);
+    }
+```
+
+Filters:
+```php
+namespace App\Filters;
+
+use Closure;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
+abstract class Filter
+{
+    protected $request;
+
+    function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
+
+    /**
+     * Handle the filter and return the builder.
+     *
+     * @param Builder $builder
+     * @param Closure $next
+     * @return void
+     */
+    public function handle(Builder $builder, Closure $next)
+    {
+        if (
+            !$this->request->has($this->filterName()) 
+            || 
+            $this->request->input($this->filterName(), '') === ''
+        ) 
+        {
+            return $next($builder);
+        }
+
+        return $this->applyFilters($next($builder));
+    }
+
+    /**
+     * apply Filters
+     *
+     * @param Builder $builder
+     * @return void
+     */
+    protected abstract function applyFilters(Builder $builder): Builder;
+
+    protected function filterName()
+    {
+        return Str::snake(class_basename($this));
+    }
+}
+```
+
+```php
+namespace App\Filters;
+
+use Illuminate\Database\Eloquent\Builder;
+
+class Title extends Filter
+{
+    protected function applyFilters(Builder $builder): Builder
+    {
+        return $builder->where('title', 'ILIKE', '%' . $this->request->input($this->filterName()) . '%');
+        // ILIKE only works in PostgreSql
+    }
+}
+```
