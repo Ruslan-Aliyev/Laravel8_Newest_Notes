@@ -518,3 +518,48 @@ class Title extends Filter
     }
 }
 ```
+## Get Server's info from within Laravel
+
+In Controller
+```php
+public function showInfo(Request $request)
+{
+    dd($request);
+}
+```
+The `server` sub-section shows the equivalent info of `$_SERVER`
+
+In Template, you can render
+```
+@php
+    phpinfo();
+@endphp
+```
+
+Find where the PHP executable is located
+```php
+public function findPhpExec()
+{
+    $phpFinder = new \Symfony\Component\Process\PhpExecutableFinder;
+
+    if (!$phpPath = $phpFinder->find()) 
+    {
+        throw new \Exception('The php executable could not be found, add it to your PATH environment variable and try again');
+    }
+
+    return $phpPath;
+}
+```
+
+## PgSql
+
+Have these in `.env`
+```
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+POSTGRESQL_ADDON_DB=xxx
+POSTGRESQL_ADDON_USER=postgres
+POSTGRESQL_ADDON_PASSWORD=
+```
+
+Enable `extension=pdo_pgsql` in `php.ini`
