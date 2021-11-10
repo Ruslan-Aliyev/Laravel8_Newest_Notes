@@ -563,3 +563,23 @@ POSTGRESQL_ADDON_PASSWORD=
 ```
 
 Enable `extension=pdo_pgsql` in `php.ini`
+
+## API returning file downloads
+
+Download PDF on server: 
+```php
+return response()->download('/absolute/path/to/file.pdf', 'filename.pdf', ['Content-Type: application/pdf']);
+```
+- Multiple: https://www.itsolutionstuff.com/post/laravel-5-multiple-files-download-with-response-exampleexample.html
+- Also note: https://stackoverflow.com/questions/29289177/binaryfileresponse-in-laravel-undefined
+
+Download PDF directly from base64:
+```php
+return response()->make( base64_decode('base64_binary_string_blah_blah') , 200, [
+    'Content-Type' => 'application/pdf',
+    'Content-Disposition' => 'inline; filename="filename.pdf"'
+]);
+```
+https://www.codegrepper.com/code-examples/php/response%28%29-%3Emake+laravel+pdf
+
+Download CSV directly from stream: https://www.laravelcode.com/post/how-to-export-csv-file-in-laravel-example
