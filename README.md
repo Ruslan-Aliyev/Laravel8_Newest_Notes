@@ -203,7 +203,7 @@ https://github.com/Ruslan-Aliyev/async_php#queue
 ## Logging
 
 Laravel uses Monolog under the hood.  
-More about PHP logs and Monolog, see: https://github.com/Ruslan-Aliyev/Log
+More about PHP logs and Monolog, see: https://github.com/Ruslan-Aliyev/log
 
 1. Default log's path: `storage/logs/laravel.log`
 
