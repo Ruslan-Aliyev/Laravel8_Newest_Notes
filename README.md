@@ -92,6 +92,12 @@ http://localhost/laravel_notes/public/admin : admin@admin.com/password
 
 `vendor/bin/phpunit`
 
+### Pest
+
+A layer on top of PHPUnit. It can shorten the code.
+
+https://www.youtube.com/watch?v=jxHVaz3iOiU
+
 ## Client Side Vallidation
 
 - https://jqueryvalidation.org/
@@ -583,3 +589,7 @@ return response()->make( base64_decode('base64_binary_string_blah_blah') , 200, 
 https://www.codegrepper.com/code-examples/php/response%28%29-%3Emake+laravel+pdf
 
 Download CSV directly from stream: https://www.laravelcode.com/post/how-to-export-csv-file-in-laravel-example
+
+## Zalo Integration
+
+https://www.youtube.com/watch?v=rXI03h4jbBg
