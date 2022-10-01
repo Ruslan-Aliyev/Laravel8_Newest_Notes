@@ -98,6 +98,8 @@ A layer on top of PHPUnit. It can shorten the code.
 
 https://www.youtube.com/watch?v=jxHVaz3iOiU
 
+Related: https://laravel-news.com/behavioral-driven-development
+
 ## Client Side Vallidation
 
 - https://jqueryvalidation.org/
