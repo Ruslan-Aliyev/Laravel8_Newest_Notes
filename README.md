@@ -255,6 +255,10 @@ Route::get('/log', function () {
 
 - https://www.youtube.com/watch?v=XWFXikdTFcw
 
+Debugging / Monitoring
+
+- https://github.com/barryvdh/laravel-debugbar
+
 ## JWT
 
 - Intro: https://github.com/Ruslan-Aliyev/auth#jwt
