@@ -595,3 +595,15 @@ Download CSV directly from stream: https://www.laravelcode.com/post/how-to-expor
 ## Zalo Integration
 
 https://www.youtube.com/watch?v=rXI03h4jbBg
+
+## Nested controllers
+
+- GOOD: https://www.youtube.com/watch?v=xqNip5PYBv8
+- GOOD: https://laraveldaily.com/post/nested-resource-controllers-and-routes-laravel-crud-example
+- Relevant: https://laracasts.com/discuss/channels/laravel/nested-resources-controllers-structure
+- Relevant: https://laracasts.com/discuss/channels/laravel/artisan-nested-resource-controllers-creation
+
+## Nested Models
+
+- GOOD: https://www.youtube.com/watch?v=5s-_SnVl-1g
+    - https://github.com/staudenmeir/eloquent-has-many-deep
