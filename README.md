@@ -614,3 +614,13 @@ https://www.youtube.com/watch?v=rXI03h4jbBg
 
 - GOOD: https://www.youtube.com/watch?v=5s-_SnVl-1g
     - https://github.com/staudenmeir/eloquent-has-many-deep
+
+## Accessors / Mutators
+
+Eg: Get timestamps in a formatted way, get name with first letter capitalized, get a currency number in the currency format ...
+
+https://laravel.com/docs/9.x/eloquent-mutators
+
+![image](https://user-images.githubusercontent.com/6761422/200237222-249b4b6f-3ed9-4a9e-8a59-c0eb9ce7f240.png)
+
+https://github.com/academico-sis/academico/blob/pro/app/Traits/PriceTrait.php#L7
