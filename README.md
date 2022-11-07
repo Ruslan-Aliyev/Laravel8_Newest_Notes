@@ -624,3 +624,10 @@ https://laravel.com/docs/9.x/eloquent-mutators
 ![image](https://user-images.githubusercontent.com/6761422/200237222-249b4b6f-3ed9-4a9e-8a59-c0eb9ce7f240.png)
 
 https://github.com/academico-sis/academico/blob/pro/app/Traits/PriceTrait.php#L7
+
+## Package Development
+
+- https://laravel.com/docs/8.x/packages
+- https://wisdmlabs.com/blog/create-package-laravel/
+- `artisan vendor:publish`: https://stillat.com/blog/2016/12/07/laravel-artisan-vendor-command-the-vendorpublish-command
+- Override package views: https://stackoverflow.com/questions/57160594/is-it-possible-to-override-a-laravel-package-view-from-another-package
