@@ -627,7 +627,7 @@ https://github.com/academico-sis/academico/blob/pro/app/Traits/PriceTrait.php#L7
 
 ## Package Development
 
-- https://laravel.com/docs/8.x/packages
+- https://laravel.com/docs/8.x/packages , https://www.youtube.com/watch?v=gqYIxv7PXxQ
 - https://wisdmlabs.com/blog/create-package-laravel/
 - `artisan vendor:publish`: https://stillat.com/blog/2016/12/07/laravel-artisan-vendor-command-the-vendorpublish-command
 - Override package views: https://stackoverflow.com/questions/57160594/is-it-possible-to-override-a-laravel-package-view-from-another-package
