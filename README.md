@@ -261,7 +261,7 @@ Debugging / Monitoring
 
 ## JWT
 
-- Intro: https://github.com/Ruslan-Aliyev/auth#jwt
+- Intro: https://github.com/atabegruslan/Others/blob/master/Security/auth.md#jwt
     - https://jwt-auth.readthedocs.io/en/develop/laravel-installation/
 - https://www.youtube.com/watch?v=VtAxYez4ZdQ
 - https://adevait.com/laravel/implementing-jwt-authentication-in-laravel
