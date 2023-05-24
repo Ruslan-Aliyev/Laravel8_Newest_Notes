@@ -383,11 +383,6 @@ window.Echo = new Echo({
 
 - https://www.youtube.com/watch?v=CkRGJC0ytdU
 
-## CORS
-
-- https://www.stackhawk.com/blog/laravel-cors/
-- https://stackoverflow.com/questions/39429462/adding-access-control-allow-origin-header-response-in-laravel-5-3-passport
-
 ## Pipeline
 
 - https://hafiqiqmal93.medium.com/laravel-eloquent-query-sfilter-using-pipeline-7c6f2673d5da
